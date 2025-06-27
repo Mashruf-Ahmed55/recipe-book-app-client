@@ -18,7 +18,7 @@ export default function DashBoardPage() {
       </div>
 
       {/* Stats */}
-      <DashboardStats items={recipes} />
+      <DashboardStats />
 
       {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
