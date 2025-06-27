@@ -1,20 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import AxiosInstance from '../services/axiosInstance';
-
-type Recipe = {
-  id: string;
-  image: string;
-  title: string;
-  cuisineType: string;
-  prepTime: number;
-  likes: number;
-  ingredients: string[];
-  instructions: string[];
-  categories: string[];
-  userId: {
-    id: string;
-  };
-};
+import type { Recipe } from '../types';
 
 type RecipeContextType = {
   recipes: Recipe[];

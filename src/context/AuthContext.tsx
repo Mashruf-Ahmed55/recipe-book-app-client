@@ -61,7 +61,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     return () => unsubscribe();
   }, []);
 
-  console.log(user);
   // LOG IN WITH GOOGLE
   const signInWithGoogleHandler = async () => {
     try {

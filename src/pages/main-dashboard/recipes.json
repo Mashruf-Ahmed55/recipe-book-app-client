@@ -1,0 +1,127 @@
+[
+  {
+    "_id": "1",
+    "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1924&q=80",
+    "title": "Delicious Pizza Recipe",
+    "ingredients": ["dough", "tomato sauce", "cheese", "pepperoni"],
+    "instructions": [
+      "Prepare dough",
+      "Add sauce and cheese",
+      "Bake until golden"
+    ],
+    "cuisineType": "italian",
+    "preparationTime": 30,
+    "categories": ["dinner", "easy"],
+    "likesCount": 25,
+    "likes": [],
+    "userId": "user123",
+    "createdAt": "2024-01-20T12:00:00.000Z",
+    "updatedAt": "2024-01-20T12:00:00.000Z"
+  },
+  {
+    "_id": "2",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599e7e6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80",
+    "title": "Spicy Tacos Recipe",
+    "ingredients": ["tortillas", "beef", "salsa", "sour cream"],
+    "instructions": ["Cook beef", "Warm tortillas", "Add toppings"],
+    "cuisineType": "mexican",
+    "preparationTime": 20,
+    "categories": ["lunch", "spicy"],
+    "likesCount": 18,
+    "likes": [],
+    "userId": "user456",
+    "createdAt": "2024-01-15T18:30:00.000Z",
+    "updatedAt": "2024-01-15T18:30:00.000Z"
+  },
+  {
+    "_id": "3",
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb644e52?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    "title": "Chicken Stir-Fry Recipe",
+    "ingredients": ["chicken", "vegetables", "soy sauce", "rice"],
+    "instructions": [
+      "Stir-fry chicken and vegetables",
+      "Add soy sauce",
+      "Serve with rice"
+    ],
+    "cuisineType": "chinese",
+    "preparationTime": 25,
+    "categories": ["dinner", "healthy"],
+    "likesCount": 32,
+    "likes": [],
+    "userId": "user789",
+    "createdAt": "2024-01-10T09:15:00.000Z",
+    "updatedAt": "2024-01-10T09:15:00.000Z"
+  },
+  {
+    "_id": "4",
+    "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    "title": "Indian Curry Recipe",
+    "ingredients": ["chicken", "curry paste", "coconut milk", "rice"],
+    "instructions": [
+      "Cook chicken with curry paste",
+      "Add coconut milk",
+      "Serve with rice"
+    ],
+    "cuisineType": "indian",
+    "preparationTime": 40,
+    "categories": ["dinner", "spicy"],
+    "likesCount": 45,
+    "likes": [],
+    "userId": "user101",
+    "createdAt": "2024-01-05T14:45:00.000Z",
+    "updatedAt": "2024-01-05T14:45:00.000Z"
+  },
+  {
+    "_id": "5",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2e35b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    "title": "Fresh Salad Recipe",
+    "ingredients": ["lettuce", "tomatoes", "cucumbers", "dressing"],
+    "instructions": ["Wash vegetables", "Chop vegetables", "Add dressing"],
+    "cuisineType": "healthy",
+    "preparationTime": 15,
+    "categories": ["lunch", "vegetarian"],
+    "likesCount": 20,
+    "likes": [],
+    "userId": "user202",
+    "createdAt": "2024-01-01T10:00:00.000Z",
+    "updatedAt": "2024-01-01T10:00:00.000Z"
+  },
+  {
+    "_id": "6",
+    "image": "https://example.com/sushi.jpg",
+    "title": "Sushi Rolls",
+    "ingredients": ["rice", "seaweed", "fish", "vegetables"],
+    "instructions": [
+      "Prepare rice",
+      "Roll ingredients in seaweed",
+      "Slice and serve"
+    ],
+    "cuisineType": "japanese",
+    "preparationTime": 60,
+    "categories": ["lunch", "dinner"],
+    "likesCount": 67,
+    "likes": [],
+    "userId": "user303",
+    "createdAt": "2023-12-28T16:20:00.000Z",
+    "updatedAt": "2023-12-28T16:20:00.000Z"
+  },
+  {
+    "_id": "7",
+    "image": "https://example.com/pasta.jpg",
+    "title": "Classic Pasta Carbonara",
+    "ingredients": ["pasta", "eggs", "pancetta", "cheese"],
+    "instructions": [
+      "Cook pasta",
+      "Mix eggs and cheese",
+      "Combine with pasta and pancetta"
+    ],
+    "cuisineType": "italian",
+    "preparationTime": 25,
+    "categories": ["dinner", "easy"],
+    "likesCount": 55,
+    "likes": [],
+    "userId": "user404",
+    "createdAt": "2023-12-20T11:00:00.000Z",
+    "updatedAt": "2023-12-20T11:00:00.000Z"
+  }
+]
