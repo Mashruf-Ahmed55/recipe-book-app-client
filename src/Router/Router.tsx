@@ -31,7 +31,9 @@ export default function Router() {
         { path: 'recipes/:id', Component: RecipeDetails },
         { path: 'login', Component: Login },
         { path: 'register', Component: Register },
+        { path: 'add-recipe', Component: AddRecipe },
         { path: 'forgot-password', Component: ForgotPassword },
+        { path: 'recipes', Component: AllRecipes },
       ],
     },
     {
@@ -40,8 +42,7 @@ export default function Router() {
       errorElement: <NotFound />,
       children: [
         { index: true, Component: DashBoardPage },
-        { path: 'recipes', Component: AllRecipes },
-        { path: 'add-recipe', Component: AddRecipe },
+
         { path: 'my-recipes', Component: MyRecipes },
       ],
     },

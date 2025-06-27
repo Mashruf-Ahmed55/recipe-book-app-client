@@ -150,193 +150,195 @@ const RecipeForm: React.FC = () => {
   };
 
   return (
-    <div className="p-6 sm:p-8">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-gray-200">
-        🍽️ Add New Recipe
-      </h2>
+    <div className="w-full">
+      <div className="max-w-7xl mx-auto p-6 sm:p-8">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-gray-200">
+          🍽️ Add New Recipe
+        </h2>
 
-      <form onSubmit={handleSubmit} className="space-y-6 pb-10">
-        {/* Title & Image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Input
-            id="image"
-            name="image"
-            type="text"
-            required
-            label="Image URL"
-            placeholder="https://example.com/image.jpg"
-            value={recipe.image}
-            onChange={handleChange}
-          />
-          <Input
-            id="title"
-            name="title"
-            type="text"
-            required
-            label="Recipe Title"
-            placeholder="e.g., Spaghetti Carbonara"
-            value={recipe.title}
-            onChange={handleChange}
-          />
-        </div>
-
-        {/* Cuisine & Prep Time */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Select
-            id="cuisineType"
-            label="Cuisine Type"
-            options={cuisineOptions}
-            value={recipe.cuisineType}
-            onChange={handleChange}
-            name="cuisineType"
-          />
-          <Input
-            id="prepTime"
-            name="prepTime"
-            type="number"
-            required
-            label="Prep Time (minutes)"
-            placeholder="30"
-            value={recipe.prepTime}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Ingredients Section */}
-          <div>
-            <h3 className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
-              Ingredients
-            </h3>
-            <div className="space-y-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-              <AnimatePresence>
-                {recipe.ingredients.map((ingredient, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex gap-3 items-center"
-                  >
-                    <span className="w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full text-sm font-semibold">
-                      {index + 1}
-                    </span>
-                    <input
-                      type="text"
-                      value={ingredient}
-                      onChange={(e) =>
-                        handleIngredientChange(index, e.target.value)
-                      }
-                      placeholder="e.g., 1 cup chopped onions"
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:text-white"
-                      required
-                    />
-                    <Button
-                      type="button"
-                      variant="danger"
-                      size="icon"
-                      onClick={() => removeIngredient(index)}
-                      disabled={recipe.ingredients.length <= 1}
-                    >
-                      <X size={20} />
-                    </Button>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-              <Button
-                type="button"
-                onClick={addIngredient}
-                variant="outline"
-                className="w-full"
-              >
-                <Plus size={18} className="mr-2" /> Add Ingredient
-              </Button>
-            </div>
+        <form onSubmit={handleSubmit} className="space-y-6 pb-10">
+          {/* Title & Image */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Input
+              id="image"
+              name="image"
+              type="text"
+              required
+              label="Image URL"
+              placeholder="https://example.com/image.jpg"
+              value={recipe.image}
+              onChange={handleChange}
+            />
+            <Input
+              id="title"
+              name="title"
+              type="text"
+              required
+              label="Recipe Title"
+              placeholder="e.g., Spaghetti Carbonara"
+              value={recipe.title}
+              onChange={handleChange}
+            />
           </div>
 
-          {/* Instructions Section */}
-          <div>
-            <h3 className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
-              Instructions
-            </h3>
-            <div className="space-y-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-              <AnimatePresence>
-                {recipe.instructions.map((instruction, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="flex gap-3 items-start"
-                  >
-                    <span className="w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full text-sm font-semibold mt-2">
-                      {index + 1}
-                    </span>
-                    <input
-                      value={instruction}
-                      onChange={(e) =>
-                        handleInstructionChange(index, e.target.value)
-                      }
-                      placeholder={`Step ${
-                        index + 1
-                      } - e.g., Heat oil in a pan...`}
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:text-white"
-                      required
-                    />
-                    <Button
-                      type="button"
-                      variant="danger"
-                      size="icon"
-                      onClick={() => removeInstruction(index)}
-                      disabled={recipe.instructions.length <= 1}
-                    >
-                      <X size={20} />
-                    </Button>
-                  </motion.div>
-                ))}
-              </AnimatePresence>
-              <Button
-                type="button"
-                onClick={addInstruction}
-                variant="outline"
-                className="w-full"
-              >
-                <Plus size={18} className="mr-2" /> Add Instruction
-              </Button>
-            </div>
+          {/* Cuisine & Prep Time */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Select
+              id="cuisineType"
+              label="Cuisine Type"
+              options={cuisineOptions}
+              value={recipe.cuisineType}
+              onChange={handleChange}
+              name="cuisineType"
+            />
+            <Input
+              id="prepTime"
+              name="prepTime"
+              type="number"
+              required
+              label="Prep Time (minutes)"
+              placeholder="30"
+              value={recipe.prepTime}
+              onChange={handleChange}
+            />
           </div>
-        </div>
-        {/* Categories */}
-        <div>
-          <h3 className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
-            Categories
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {predefinedCategories.map((category) => {
-              const selected = recipe.categories.includes(category);
-              return (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Ingredients Section */}
+            <div>
+              <h3 className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+                Ingredients
+              </h3>
+              <div className="space-y-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <AnimatePresence>
+                  {recipe.ingredients.map((ingredient, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex gap-3 items-center"
+                    >
+                      <span className="w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full text-sm font-semibold">
+                        {index + 1}
+                      </span>
+                      <input
+                        type="text"
+                        value={ingredient}
+                        onChange={(e) =>
+                          handleIngredientChange(index, e.target.value)
+                        }
+                        placeholder="e.g., 1 cup chopped onions"
+                        className="flex-1 px-3 py-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:text-white"
+                        required
+                      />
+                      <Button
+                        type="button"
+                        variant="danger"
+                        size="icon"
+                        onClick={() => removeIngredient(index)}
+                        disabled={recipe.ingredients.length <= 1}
+                      >
+                        <X size={20} />
+                      </Button>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
                 <Button
-                  key={category}
                   type="button"
-                  variant={selected ? 'primary' : 'outline'}
-                  onClick={() => toggleCategory(category)}
-                  className="rounded-full text-sm"
+                  onClick={addIngredient}
+                  variant="outline"
+                  className="w-full"
                 >
-                  {category}
+                  <Plus size={18} className="mr-2" /> Add Ingredient
                 </Button>
-              );
-            })}
-          </div>
-        </div>
+              </div>
+            </div>
 
-        {/* Submit */}
-        <div>
-          <Button type="submit" className="w-full text-lg py-3">
-            ✅ Submit Recipe
-          </Button>
-        </div>
-      </form>
+            {/* Instructions Section */}
+            <div>
+              <h3 className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+                Instructions
+              </h3>
+              <div className="space-y-3 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                <AnimatePresence>
+                  {recipe.instructions.map((instruction, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex gap-3 items-start"
+                    >
+                      <span className="w-8 h-8 flex items-center justify-center bg-orange-500 text-white rounded-full text-sm font-semibold mt-2">
+                        {index + 1}
+                      </span>
+                      <input
+                        value={instruction}
+                        onChange={(e) =>
+                          handleInstructionChange(index, e.target.value)
+                        }
+                        placeholder={`Step ${
+                          index + 1
+                        } - e.g., Heat oil in a pan...`}
+                        className="flex-1 px-3 py-2 border border-gray-300 rounded-md dark:bg-gray-700 dark:text-white"
+                        required
+                      />
+                      <Button
+                        type="button"
+                        variant="danger"
+                        size="icon"
+                        onClick={() => removeInstruction(index)}
+                        disabled={recipe.instructions.length <= 1}
+                      >
+                        <X size={20} />
+                      </Button>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+                <Button
+                  type="button"
+                  onClick={addInstruction}
+                  variant="outline"
+                  className="w-full"
+                >
+                  <Plus size={18} className="mr-2" /> Add Instruction
+                </Button>
+              </div>
+            </div>
+          </div>
+          {/* Categories */}
+          <div>
+            <h3 className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+              Categories
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {predefinedCategories.map((category) => {
+                const selected = recipe.categories.includes(category);
+                return (
+                  <Button
+                    key={category}
+                    type="button"
+                    variant={selected ? 'primary' : 'outline'}
+                    onClick={() => toggleCategory(category)}
+                    className="rounded-full text-sm"
+                  >
+                    {category}
+                  </Button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Submit */}
+          <div>
+            <Button type="submit" className="w-full text-lg py-3">
+              ✅ Submit Recipe
+            </Button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -59,10 +59,10 @@ const Navbar: React.FC = () => {
                     Add Recipe
                   </Link>
                   <Link
-                    to="/my-recipes"
+                    to="/main-dashboard"
                     className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-amber-600 dark:text-gray-200 dark:hover:text-amber-400 transition-colors duration-200"
                   >
-                    My Recipes
+                    Dashboard
                   </Link>
                 </>
               )}
@@ -178,11 +178,11 @@ const Navbar: React.FC = () => {
                 Add Recipe
               </Link>
               <Link
-                to="/my-recipes"
+                to="/main-dashboard"
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-amber-600 hover:bg-gray-50 dark:text-gray-200 dark:hover:text-amber-400 dark:hover:bg-gray-700 transition-colors duration-200"
                 onClick={toggleMenu}
               >
-                My Recipes
+                Dashboard
               </Link>
             </>
           )}
